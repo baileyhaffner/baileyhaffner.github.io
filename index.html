@@ -1,37 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bailey Haffner</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bailey Haffner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .header {
+            background-color: black;
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+        }
+        .header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        .header nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .main-section {
+            padding: 20px 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 70px;
+            margin: 20px 0;
+        }
+        .button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 200px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+        .button img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 10px;
+        }
+        .contact {
+            text-align: left;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        .contact-item img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .contact-item a {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>UNDER CONSTRUCTION...</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>##########</p>
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+            <h1>Bailey Haffner</h1>
+        </div>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="#contact">Contact</a>          
+        </nav>
+    </header>
+    
+    <section class="main-section">
+        <h1>Welcome to BaileyHaffner.github.io</h1>
+        <p>I'm still building my site so please be patient as I get it up and running!</p>
     </section>
     
-    <section>
-      <h2>My Services</h2>
-      <p>##########</p>
+    <div class="buttons">
+        <a href="about.html" class="button">
+            <img src="about-icon.png" alt="About Icon">
+            About
+        </a>
+        <a href="projects.html" class="button">
+            <img src="projects-icon.png" alt="Projects Icon">
+            Projects
+        </a>
+    </div>
+    
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-item">
+            <img src="assets/images/icons/mail-icon.png" alt="Email Icon">
+            <p id="email" onclick="copyEmail()" style="cursor: pointer; color: black; text-decoration: none;">
+                baileyhaffner@gmail.com
+            </p>
+        </div>
+        <div class="contact-item">
+            <img src="assets/images/icons/address-icon.png" alt="Address Icon">
+            <p>Perth, Western Australia</p>
+        </div>
+        <div class="contact-item">
+            <img src="assets/images/icons/linkedin-icon.png" alt="LinkedIn Icon">
+            <a href="https://www.linkedin.com/in/bailey-haffner-488a812b9/" target="_blank">Find me on LinkedIn</a>
+        </div>
+        <div class="contact-item">
+            <img src="assets/images/icons/github-icon.png" alt="GitHub Icon">
+            <a href="https://github.com/baileyhaffner" target="_blank">Check out my GitHub</a>
+        </div>
     </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2025 baileyhaffner.github.io. All rights reserved.</p>
-  </footer>
-  
-  <script src="script.js"></script>
+    
+    <footer>
+        <p>&copy; 2025 baileyhaffner.github.io. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function copyEmail() {
+            const email = "baileyhaffner@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy email: ", err);
+            });
+        }
+    </script>
+
+    <style>
+        .contact {
+            text-align: left;
+        }
+
+        .contact h2 {
+            margin-bottom: 15px; /* Reduce space between heading and contact details */
+        }
+    
+        .contact-item {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            gap: 0px; /* Adjust spacing between icon and text */
+            margin: 0px 0; /* Add spacing between items */
+        }
+    
+        .contact-item img {
+            width: 24px; /* Adjust icon size */
+            height: auto;
+        }
+    
+        .contact-item p, .contact-item a {
+            margin: 0; /* Remove default margin */
+        }
+    </style>
+    
 </body>
 </html>
