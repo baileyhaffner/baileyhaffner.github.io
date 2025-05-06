@@ -6,12 +6,28 @@
     <title>Bailey Haffner</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/icons/logo_white.svg">
     <style>
+        /* font for heads and body */
+        @font-face {
+            font-family: 'DINMittelschrift';
+            src: url('assets/fonts/din_mittelschrift.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'DINSchablonierschrift';
+            src: url('assets/fonts/din_schablonierschrift.otf') format('opentype');
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'DINMittelschrift', Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
         }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'DINSchablonierschrift', Arial, sans-serif;
+        }
+
         .header {
             background-color: black;
             color: rgb(255, 255, 255);
@@ -42,6 +58,7 @@
             gap: 70px;
             margin: 20px 0;
         }
+        
         .button {
             display: flex;
             flex-direction: column;
@@ -55,6 +72,7 @@
             font-size: 18px;
             border-radius: 10px;
         }
+
         .button img {
             width: 70px;
             height: 70px;
